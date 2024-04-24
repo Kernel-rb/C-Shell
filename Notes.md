@@ -1,3 +1,5 @@
- Notes
-## Parser 
--  aanalyzes the structure of source code to ensure it follows the syntax rules of the language.Its role is to translate the code into a format that the computer can understand and execute
+# Notes
+
+## Parser
+
+- **Parsing**, or **syntax analysis**, is the process of analyzing a string of symbols, whether in natural language, computer science, or data structures, conforming to the rules of a formal grammar. 📝✨
