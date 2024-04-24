@@ -2,8 +2,28 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+#include <string.h>
+
+static char buffer[2048];
+
+char* readline(char* prompt){
+  fputs(prompt , stdout);
+  fgets(buffer , 2048 , stdin);
+  char* cpy = malloc(strlen(buffer) + 1);
+  strcpy(cpy , buffer);
+  cpy[strlen(cpy) - 1 ] = '\0';
+  return cpy;
+}
+
+// Fake add_history function 
+void add_history(char* unused){};
+
+// otherwise  include the edline function 
+#else 
 #include <editline/readline.h>
 #include <histedit.h>
+#endif
 
 // colors :
 #define ANSI_COLOR_CYAN "\x1b[36m"
