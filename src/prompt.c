@@ -42,6 +42,7 @@ int main(int argc , char** argv){
     char *input = readline("");
     add_history(input);
     if(strcmp(input , "exit") == 0){
+      printf(ANSI_COLOR_CYAN "good bye \n" ANSI_COLOR_RESET);
       exit(0);
     }
     printf("u write :  %s \n", input);
