@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# Change directory to the source directory
+cd "$(dirname "$0")/src" || exit
+
 # Compile the C-Shell code
-gcc -o cshell cshell.c
+gcc -o cshell main.c
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
